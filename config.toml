@@ -10,70 +10,20 @@ theme = "twenty-twenty-hugo"
     weight = 1
     contentDir = './content'
 
-  # main menu
-  [[menu.main]]
-  name = "首頁 home"
-  URL = "/"
-  weight = 1
-
-  [[menu.main]]
-  name = "餐點菜單 food menu"
-  URL = "food-menu"
-  weight = 2
-
-  [[menu.main]]
-  name = "飲品菜單 drink menu"
-  URL = "drink-menu"
-  weight = 3
-
-  [[menu.main]]
-  name = "交通資訊 Traffic info"
-  URL = "traffic"
-  weight = 4
-
-  [[menu.main]]
-  name = "聯絡資訊 Contact"
-  URL = "contact"
-  weight = 5
-
-
-  # only desktop menu
-  [[menu.desktop]]
-  name = "聯絡資訊"
-  URL = "contact"
-  weight = 1
-
-
-  # footer
-  [params.footer]
-  title = "關於我們"
-  content = "安迪艾倫咖啡小館  Andy Ellen Icafe "
-  address = "新北市淡水區北新路117-2號"
-  hours = "Monday–Friday: 12:00AM–9:00PM <br> Saturday & Sunday: 12:00AM–9:00PM"
-  copyright = "Copyright &copy; 2022 安迪艾倫咖啡小館 Andy Ellen I cafe "
 
 ######################## English default configuration ####################
   [languages.en]
   baseURL = 'https://aeicafe.com/en'
     languageName = 'English'
-    title = 'Andy Ellen Icafe'
+    title = 'Andy Ellen I café'
     weight = 2
     contentDir = './content/en'
-
-
-    # footer
-    [params.en.footer]
-    title = "About"
-    content = "安迪艾倫咖啡小館  Andy Ellen Icafe "
-    address = "新北市淡水區北新路117-2號"
-    hours = "Monday–Friday: 12:00AM–9:00PM <br> Saturday & Sunday: 12:00AM–9:00PM"
-    copyright = "Copyright &copy; 2022 安迪艾倫咖啡小館 Andy Ellen I cafe "
 
 ######################## Japan default configuration ####################
   [languages.jp]
       baseURL = 'https://aeicafe.com/jp'
-      languageName = 'Japan'
-      title = '日本'
+      languageName = 'にほんご'
+      title = '日本語／にほんご'
       weight = 3
       contentDir = './content/jp'
 
@@ -114,6 +64,40 @@ author = "author"
 ############################## navigation ###############################
 
 
+  # main menu
+  [[menu.main]]
+  name = "首頁"
+  URL = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "餐點菜單"
+  URL = "food-menu"
+  weight = 2
+
+  [[menu.main]]
+  name = "飲品菜單"
+  URL = "drink-menu"
+  weight = 3
+
+  [[menu.main]]
+  name = "交通資訊"
+  URL = "traffic"
+  weight = 4
+
+  [[menu.main]]
+  name = "聯絡資訊"
+  URL = "contact"
+  weight = 5
+
+
+  # only desktop menu
+  [[menu.desktop]]
+  name = "聯絡資訊"
+  URL = "contact"
+  weight = 1
+
+
     # main menu France
         [[languages.fr.menu.main]]
         name = "fr 首頁 home"
@@ -141,15 +125,6 @@ author = "author"
         category = "categories"
         tag = "tags"
         author = "author"
-
-    # footer
-        [languages.fr.params.footer]
-        title = "fr"
-        content = "this fd "
-        address = "this fd "
-        hours = "Monday–Friday: 12:00AM–9:00PM <br> Saturday & Sunday: 12:00AM–9:00PM"
-        copyright = "Copyright &copy; 2022 安迪艾倫咖啡小館 Andy Ellen I cafe "
-
 
 #################### default parameters ################################
 [params]
@@ -191,6 +166,48 @@ enable = true
 [[params.gallery.gallery_item ]]
 image = "images/traffic.png"
 
+############################# footers ########################
+
+# footer
+[params.footer]
+title = "關於我們"
+content = "安迪艾倫咖啡小館  Andy Ellen I café"
+address = "新北市淡水區北新路117-2號"
+hours = "Monday–Friday: 12:00AM–9:00PM <br> Saturday & Sunday: 12:00AM–9:00PM"
+copyright = "Copyright &copy; 2022 安迪艾倫咖啡小館 Andy Ellen I café"
+
+
+# footer zh 
+[languages.zh.params.footer]
+title = "關於我們"
+content = "安迪艾倫咖啡小館  Andy Ellen I café"
+address = "新北市淡水區北新路117-2號"
+hours = "Monday–Friday: 12:00AM–9:00PM <br> Saturday & Sunday: 12:00AM–9:00PM"
+copyright = "Copyright &copy; 2022 安迪艾倫咖啡小館 Andy Ellen I café"
+
+# footer en
+[languages.en.params.footer]
+title = "About us"
+content = "Andy Ellen I café"
+address = "No. 117-2, Beixin Rd, Tamsui District, New Taipei City, 251"
+hours = "Monday–Friday: 12:00AM–9:00PM <br> Saturday & Sunday: 12:00AM–9:00PM"
+copyright = "Copyright &copy; 2022 Andy Ellen I café"
+
+# footer jp
+[languages.jp.params.footer]
+title = "前書き"
+content = " Andy Ellen I café コーヒーショップ"
+address = "新北市淡水区北新路117-2号"
+hours = "Monday–Friday: 12:00AM–9:00PM <br> Saturday & Sunday: 12:00AM–9:00PM"
+copyright = "Copyright &copy; 2022 安迪艾倫咖啡小館 Andy Ellen I café"
+
+# footer fr
+[languages.fr.params.footer]
+title = "About us"
+content = "Andy Ellen I café"
+address = "No. 117-2, route Beixin, district de Tamsui, nouvelle ville de Taipei"
+hours = "Monday–Friday: 12:00AM–9:00PM <br> Saturday & Sunday: 12:00AM–9:00PM"
+copyright = "Copyright &copy; 2022 安迪艾倫咖啡小館 Andy Ellen I café"
 
 ############################# social site ########################
 [params.social]
