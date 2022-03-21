@@ -1,8 +1,20 @@
 ######################## Theme configuration ####################
 theme = "twenty-twenty-hugo"
 
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "10"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = [] # desable language from here
+# google analytics
+googleAnalytics = "" # example : UA-123-45
+
+
 [languages]
-######################## 繁體中文 default configuration ####################
+######################## 繁體中文 ZH default configuration ####################
   [languages.zh]
   baseURL = 'https://aeicafe.com'
     languageName = '繁體中文'
@@ -35,19 +47,6 @@ theme = "twenty-twenty-hugo"
       weight = 4
       contentDir = './content/fr'
 
-# post pagination
-paginate = "6"
-# post excerpt
-summaryLength = "10"
-# disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
-# disable language
-disableLanguages = [] # desable language from here
-# google analytics
-googleAnalytics = "" # example : UA-123-45
-
-
-
 ############################## Output ###############################
 [outputs]
 home = ["HTML", "RSS", "JSON"]
@@ -61,70 +60,149 @@ category = "categories"
 tag = "tags"
 author = "author"
 
-############################## navigation ###############################
+############################## 繁體中文 ZH navigation ###############################
+
+# main menu
+[[menu.main]]
+name = "首頁"
+URL = "/"
+weight = 1
+
+[[menu.main]]
+name = "餐點菜單"
+URL = "food-menu"
+weight = 2
+
+[[menu.main]]
+name = "飲品菜單"
+URL = "drink-menu"
+weight = 3
+
+[[menu.main]]
+name = "交通資訊"
+URL = "traffic"
+weight = 4
+
+[[menu.main]]
+name = "聯絡資訊"
+URL = "contact"
+weight = 5
 
 
-  # main menu
-  [[menu.main]]
-  name = "首頁"
-  URL = "/"
-  weight = 1
+# only desktop menu
+[[menu.desktop]]
+name = "聯絡資訊"
+URL = "contact"
+weight = 1
 
-  [[menu.main]]
-  name = "餐點菜單"
-  URL = "food-menu"
-  weight = 2
+############################## EN navigation ###############################
 
-  [[menu.main]]
-  name = "飲品菜單"
-  URL = "drink-menu"
-  weight = 3
+# main menu
+[[languages.en.menu.main]]
+name = "home"
+URL = "/"
+weight = 1
 
-  [[menu.main]]
-  name = "交通資訊"
-  URL = "traffic"
-  weight = 4
+[[languages.en.menu.main]]
+name = "food menu"
+URL = "food-menu"
+weight = 2
 
-  [[menu.main]]
-  name = "聯絡資訊"
-  URL = "contact"
-  weight = 5
+[[languages.en.menu.main]]
+name = "drink menu"
+URL = "drink-menu"
+weight = 3
+
+[[languages.en.menu.main]]
+name = "Traffic info"
+URL = "traffic"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 5
 
 
-  # only desktop menu
-  [[menu.desktop]]
-  name = "聯絡資訊"
-  URL = "contact"
-  weight = 1
+# only desktop menu
+[[languages.en.menu.desktop]]
+name = "Contact us"
+URL = "contact"
+weight = 1
+
+############################## JP navigation ###############################
+
+# main menu
+[[languages.jp.menu.main]]
+name = "home"
+URL = "/"
+weight = 1
+
+[[languages.jp.menu.main]]
+name = "food menu"
+URL = "food-menu"
+weight = 2
+
+[[languages.jp.menu.main]]
+name = "drink menu"
+URL = "drink-menu"
+weight = 3
+
+[[languages.jp.menu.main]]
+name = "Traffic info"
+URL = "traffic"
+weight = 4
+
+[[languages.jp.menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 5
 
 
-    # main menu France
-        [[languages.fr.menu.main]]
-        name = "fr 首頁 home"
-        URL = "/"
-        weight = 1
+# only desktop menu
+[[languages.jp.menu.desktop]]
+name = "Contact us"
+URL = "contact"
+weight = 1
 
-    [[languages.fr.menu.main]]
-        name = "cusinè food menu"
-        URL = "food-menu"
-        weight = 2  
+############################## FR navigation ###############################
+# main menu
+[[languages.fr.menu.main]]
+name = "home"
+URL = "/"
+weight = 1
+
+[[languages.fr.menu.main]]
+name = "food menu"
+URL = "food-menu"
+weight = 2
+
+[[languages.fr.menu.main]]
+name = "drink menu"
+URL = "drink-menu"
+weight = 3
+
+[[languages.fr.menu.main]]
+name = "Traffic info"
+URL = "traffic"
+weight = 4
+
+[[languages.fr.menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 5
+
+
+# only desktop menu
+[[languages.fr.menu.desktop]]
+name = "Contact us"
+URL = "contact"
+weight = 1
 
     # blog
         [params.fr.blog]
         heading="餐點 Meals"
         heading2 ="飲品 Drinks"
-
-    [languages.fr.outputs]
-        home = ["HTML", "RSS", "JSON"]
-
-    # unsafe html
-        [languages.fr.markup.goldmark.renderer]
-        unsafe = true
-
-    [languages.fr.taxonomies]
-        category = "categories"
-        tag = "tags"
-        author = "author"
 
 #################### default parameters ################################
 [params]
